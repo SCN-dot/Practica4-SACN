@@ -26,7 +26,7 @@ void probarEnrutador() {
     a.mostrarVecinos();
 }
 
-// Prueba de la clase Red con la topologia de la Figura 1 de la guia
+// Prueba de la clase Red
 void probarRed() {
     cout << "\n   Prueba de Red   " << endl;
 

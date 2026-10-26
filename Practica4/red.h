@@ -5,16 +5,11 @@
 #include <map>
 #include "enrutador.h"
 
-// La Red guarda todos los enrutadores y gestiona los enlaces entre ellos.
-// Modelo centralizado: la Red es quien tiene la vision completa de la topologia.
 class Red {
 private:
     std::map<std::string, Enrutador> enrutadores; // nombre -> enrutador
 
-    // Se llama despues de cada cambio de topologia.
-    // Por ahora deja las tablas con los vecinos directos; aqui se agregara
-    // el calculo de caminos minimos en la segunda entrega.
-    void actualizarTablas();
+    void actualizarTablas(); //por ahora solo reinicias las tablas
 
 public:
     // Enrutadores

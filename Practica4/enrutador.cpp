@@ -3,10 +3,10 @@
 
 using namespace std;
 
-Enrutador::Enrutador(const string& nombre) : nombre(nombre) {
+Enrutador::Enrutador(const string& nombre) : nombre(nombre) { //atr(par)
     reiniciarTabla();
 }
-
+//devuelven atributo
 const string& Enrutador::getNombre() const { return nombre; }
 const map<string, int>& Enrutador::getVecinos() const { return vecinos; }
 const map<string, int>& Enrutador::getTabla() const { return tabla; }
@@ -22,7 +22,7 @@ bool Enrutador::eliminarVecino(const string& vecino) {
 int Enrutador::costoEnlace(const string& vecino) const {
     auto it = vecinos.find(vecino);
     if (it == vecinos.end()) return -1;
-    return it->second;
+    return it->second; //desre acce
 }
 
 // Estado inicial segun la guia: solo se conocen los destinos directamente conectados
@@ -47,7 +47,7 @@ int Enrutador::costoA(const string& destino) const {
 void Enrutador::mostrarVecinos() const {
     cout << "Vecinos de " << nombre << ": ";
     if (vecinos.empty()) cout << "(ninguno)";
-    for (const auto& v : vecinos) {
+    for (const auto& v : vecinos) { //name cost
         cout << v.first << "(" << v.second << ") ";
     }
     cout << endl;
